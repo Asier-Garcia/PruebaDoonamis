@@ -1,3 +1,27 @@
+
+## LAUNCH THE APP
+### Para desplegar la app:
+- actualizar/instalar composer
+- copiar un .env igual que el del ejemplo, modificando los parametros de conexion de BBDD: 
+cp .env.example .env
+- generar clave de app: php artisan key:generate
+- crear un data.json en storage/app/json para llenar la BBDD
+Ej.
+[{
+    "userId": 1,
+    "title": "Primera publicación",
+    "body": "Este es el contenido de la primera publicación."
+},
+{
+    "userId": 2,
+    "title": "Segunda publicación",
+    "body": "Este es el contenido de la segunda publicación."
+}]
+
+- migrar y llenar la BBDD: php artisan migrate / php artisan db:seed
+- desplegar el proyecto: php artisan serve
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

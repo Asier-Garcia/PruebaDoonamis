@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PublicacionesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('index');
-});*/
+});
 
-Route::get('/', 'App\Http\Controllers\PublicacionesController@index');
+Route::get('/api/publicaciones', [PublicacionesController::class, 'index']);
